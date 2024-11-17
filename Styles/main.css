@@ -1,0 +1,239 @@
+:root{
+    --main-text:#00b289;
+    --special-text:#f8db62;
+    --text:#4c4d5f;
+    --shape:#f2faff;
+}
+
+
+
+*,*:before,*:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    overflow-x: hidden;
+
+}
+
+a{
+
+    color: inherit;
+    text-transform: capitalize;
+
+
+}
+
+.blueshape{
+    background-color:var(--shape) ;
+    position: absolute;
+   left: 20%;
+   top: -50%;
+    width: 90%;
+    height: 120%;
+    transform: rotate(-23deg);
+    z-index: -1;
+    
+   
+}
+
+
+.wrapper{
+    width: 98%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-inline: auto;
+    
+    
+    padding-top: 1.2rem;
+
+
+    font-size:0.9rem;
+    justify-content: space-between;
+
+
+
+
+    >header{
+        
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        
+   
+        z-index: 1000;   
+        background-color: white;
+        
+        align-items: center;
+        
+
+    
+        
+
+        .logo{
+            flex: 1 2 auto;
+            text-align: start;
+            img{
+                max-width: 10em;
+            }
+
+
+        }
+        
+
+        nav{
+            
+            color: var(--text);
+            flex: 1 1 auto;
+            justify-content: space-evenly;
+
+            font-size: 1.2em;
+            display: none;
+
+
+        }
+        .buttons
+        {
+            
+            flex: 1 0 auto;
+            gap: 1em;
+            display: none;
+
+            .button{
+                padding:  0.5em 0.8em;
+                border:solid var(--main-text) 1px;
+
+
+                border-radius: 0.2rem;
+
+                text-align: center;
+                flex: 1 0 auto;
+
+            }
+            a{
+                text-transform: uppercase;
+                
+                  
+                  
+                
+                
+                color: var(--main-text);
+                font-weight: bold;
+
+
+
+                
+
+            }
+            
+            .button:last-child{
+                background-color: var(--main-text);
+                a{color: white;}
+                flex: 2 0 auto;
+            }
+
+            .button:hover{
+                background-color: #08a17e;
+                cursor: pointer;
+                a{color: white;}
+            }
+
+        }
+
+
+        .tab 
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 1.2rem;
+            width: 2rem;
+            align-items: flex-end;
+            span{
+                transition: all 0.5s ease-in-out;
+                width: 100%;
+                height: 10%;
+                
+                background-color: var(--text);
+            }
+            
+
+            
+        }
+        .tab:hover {
+            cursor: pointer;
+
+            span:first-child{
+                transform: translateY(0.5rem) rotate(45deg);
+                
+
+                    
+            }
+            span:nth-child(2)
+            {
+                display: none;
+            }
+            span:last-child{
+                
+                transform: translateY(-0.5rem) rotate(-45deg);
+               
+                
+            }
+
+           
+
+           
+        }
+        
+
+     
+    }
+
+
+
+
+    .pricing{
+
+
+
+    }
+}
+
+
+
+@keyframes anim{
+    50%{
+        transform: translateY(0.5rem) rotate(0deg);
+    }
+    100%{
+        transform: translateY(0.5rem) rotate(45deg);
+    }
+}
+
+@keyframes anim2 {
+    50%{
+        transform: translateY(-0.5rem) rotate(0deg);
+    }
+    100%{
+        transform: translateY(-0.5rem) rotate(-45deg);
+    }
+}
+
+@media (min-width:800px)
+{
+  .wrapper {
+   
+        width: 90%;
+    margin-inline: auto;
+    header{
+    background-color: white;
+    .tab{display: none;}
+    .buttons{display: flex;}
+    nav{display: flex;}
+    }
+
+  }
+  
+    
+}
