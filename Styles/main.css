@@ -39,8 +39,7 @@ a{
 
 
 .wrapper{
-    width: 98%;
-
+    width: 95%;
     display: flex;
     flex-direction: column;
 
@@ -58,14 +57,23 @@ a{
 
     >header{
         
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         display: flex;
         
-   
-        z-index: 1000;   
+
         background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        z-index: 1000;  
+        width: 100vw;
+
+        left:0; 
+        top:0;
+        padding: 1.5em 2.5%;
+        
         
         align-items: center;
+
+        
         
 
     
@@ -194,7 +202,7 @@ a{
 
 
     .pricing{
-
+        margin-top: 10em;
 
 
     }
@@ -224,10 +232,10 @@ a{
 {
   .wrapper {
    
-        width: 90%;
+        width: 80%;
     margin-inline: auto;
-    header{
-    background-color: white;
+    >header{
+        padding-inline:10%;
     .tab{display: none;}
     .buttons{display: flex;}
     nav{display: flex;}
