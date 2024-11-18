@@ -13,7 +13,7 @@
     padding: 0;
     text-decoration: none;
     overflow-x: hidden;
-
+    font-weight: normal;
 }
 
 a{
@@ -59,7 +59,7 @@ a{
         
         display: flex;
         
-
+        
         background-color: white;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         position: fixed;
@@ -94,9 +94,9 @@ a{
             
             color: var(--text);
             flex: 1 1 auto;
-            justify-content: space-evenly;
+            justify-content: space-between;
 
-            font-size: 1.2em;
+            font-size: 1.1em;
             display: none;
 
 
@@ -105,18 +105,21 @@ a{
         {
             
             flex: 1 0 auto;
-            gap: 1em;
+            gap: 2rem;
             display: none;
+          justify-content: flex-end;
 
             .button{
-                padding:  0.5em 0.8em;
+                padding:  0.5rem 0.8rem;
                 border:solid var(--main-text) 1px;
-
+                
 
                 border-radius: 0.2rem;
 
                 text-align: center;
-                flex: 1 0 auto;
+                
+                font-size: 0.8rem;
+                
 
             }
             a{
@@ -138,13 +141,14 @@ a{
             .button:last-child{
                 background-color: var(--main-text);
                 a{color: white;}
-                flex: 2 0 auto;
+               width: 40%;
             }
 
             .button:hover{
                 background-color: #08a17e;
                 cursor: pointer;
                 a{color: white;}
+                
             }
 
         }
@@ -201,13 +205,213 @@ a{
 
 
 
-    .pricing{
-        margin-top: 10em;
-
-
-    }
+  
 }
 
+main{
+    color: var(--text);
+    .pricing{
+        margin-top: 8em;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        
+
+        .title{
+            display: flex;
+            justify-content: center;
+            gap: 4em;
+            align-items: center;
+            width: 100%;
+            font-size: 0.6rem;
+            h1{
+                font-size: 3.5em;
+                text-transform: capitalize;
+                flex: 0 1 auto;
+
+                
+            }
+
+            .bill{
+                align-items: center;
+                display: flex;
+                flex: 0 1 auto;
+                gap: 1em;
+                justify-content: flex-end;
+                h2:first-of-type{
+                    color: black;
+                    
+                }
+                h2{
+                    text-transform: uppercase;
+                    position: relative;
+                    
+                }
+            
+            
+
+             /* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-text);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--main-text)
+  }
+  
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+
+
+  }
+label:has(input:checked) ~ h2 {
+    color: black;
+  }
+
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  } 
+        }
+
+    }
+
+    h2 +img{
+        color: var(--main-text);
+        text-transform: uppercase;
+        position: absolute;
+        transform: translate(15%,-50%);
+        
+    }
+
+    .prices{
+        margin-top: 3em;
+        width: 100%;
+        display: grid;
+        grid-template-columns:1fr;
+        gap: 2em;
+        article{
+            background-color: white;
+            padding: 3em;
+            
+            gap: 1.5em;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+            
+
+            border: solid rgba(0, 0, 0, 0.1) 1px;
+            
+          
+            header h3
+            {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            header p{
+                margin-top: 1em;
+                font-size: 0.7rem;
+            }
+            span{
+                position: absolute;
+                right: -5%;
+                top: 5%;
+                background-color: var(--main-text);
+                color: white;
+                padding: 0.5em 3em;
+                font-size: 1rem;
+                transform: rotate(45deg);
+                text-transform: uppercase;
+                font-weight: bold;
+                
+            }
+
+            main h2{
+                font-size: 3.5em;
+                text-transform: uppercase;
+                white-space: nowrap;
+                
+                sub , sup{
+                    font-size: 1.2rem;
+                }
+                border-bottom: solid 1px var(--main-text);
+            }
+            main ul{
+                margin-top: 2em;
+                text-transform: capitalize;
+                li{
+                    margin-top: 1em;
+                    
+                }
+                
+            }
+            footer{
+                width: 100%;
+                background-color: var(--main-text);
+                text-align: center;
+                color: white;
+                padding: 1.5em;
+                border-radius: 0.5em;
+                text-transform: uppercase;
+                font-size:0.8rem;
+                font-weight: bold;
+            }
+            footer:hover{
+                cursor: pointer;
+                background-color: #08a17e;
+            }
+        }
+    }
+
+    }
+    
+}
 
 
 @keyframes anim{
@@ -228,7 +432,7 @@ a{
     }
 }
 
-@media (min-width:800px)
+@media (min-width:1000px)
 {
   .wrapper {
    
@@ -239,7 +443,40 @@ a{
     .tab{display: none;}
     .buttons{display: flex;}
     nav{display: flex;}
+
     }
+    .pricing{
+        margin-top: 14em;
+        .title{
+            font-size: 0.6rem;
+         
+        h1{
+            font-size: 2rem;
+        }
+    }
+        .prices{
+            grid-template-columns: repeat( auto-fit , minmax( 200px , auto) );
+            gap: 2em;
+
+            article  span{
+                right: -17%;
+                top: 5%; 
+            }
+
+            article main{
+                flex: 1 0 auto;
+            }
+        }
+
+
+      
+    
+
+
+
+
+    }
+    
 
   }
   
