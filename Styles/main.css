@@ -561,7 +561,10 @@ label:has(input:checked) ~ h2 {
        
         >main{
         font-size: 0.8rem;
-        display: none;
+        opacity: 0;
+        height: 0;
+        transition: opacity 0.5s 0.5s ease, height 0.5s ease;
+        overflow-y: hidden;
         }
       
     }
@@ -573,9 +576,6 @@ label:has(input:checked) ~ h2 {
         >footer
         {
             opacity: .2;
-        }
-        >main{
-            display: block;
         }
     }
    
